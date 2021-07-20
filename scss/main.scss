@@ -1,0 +1,1145 @@
+$gris: #232931;
+$negro: #171717;
+$verde: #4ECCA3;
+$blanco: #EEEEEE;
+
+body{
+    background-color: $gris;
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    color: $blanco;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+fieldset{
+    margin-left: 15px;
+    margin-top: 10px;
+    color: $blanco;
+}
+
+ul li{
+    list-style: none;
+    color: $blanco;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ol li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.formatoTitulos{
+    font-weight: bold;
+    color: $verde;
+    font-size: 28px !important;
+    display: block;
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* mixin */
+@mixin sizes($width, $heigth){
+    height: $heigth;
+    width: $width;
+}
+
+@mixin lados($margin-left, $margin-right){
+    margin-left: $margin-left;
+    margin-right: $margin-right;
+}
+/* fin mixin */
+
+
+/* diseño inicio */
+
+@media only screen and (max-width: 600px){
+
+    #inicio{
+        @include lados(8%, 8%);
+
+        #inicio__parrafos{
+            display: flex;
+            flex-direction: column;
+            margin-top: 0;
+            font-size: 17px;
+        }
+
+        #inicio__imagenes{
+            display: flex;
+            flex-direction: column;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            img{
+                @include sizes(100%, 100%);
+                padding: 15px;
+            }
+        }
+
+        #inicio__generos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 17px;
+            margin-top: 10px;
+            margin-bottom: 50px;
+            p{
+                color: $verde;
+            }
+            ul{
+                padding: 0;
+                li{
+                    color: $verde;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px){
+
+    #inicio{
+        @include lados(8%, 8%);
+
+        #inicio__parrafos{
+            display: flex;
+            flex-direction: column;
+            margin-top: px;
+            font-size: 20px;
+        }
+
+        #inicio__imagenes{
+            display: flex;
+            flex-direction: column;
+            padding-top: 25px;
+            padding-bottom: 10px;
+            img{
+                @include sizes(100%, 100%);
+                padding-left: 50px;
+                padding-right: 50px;
+                padding-bottom: 25px;
+            }
+        }
+
+        #inicio__generos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 100px;
+            p{
+                color: $verde;
+            }
+            ul{
+                padding: 0;
+                li{
+                    color: $verde;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px){
+
+    #inicio{
+        @include lados(12%, 12%);
+
+        #inicio__parrafos{
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            font-size: 20px;
+        }
+
+        #inicio__imagenes{
+            display: flex;
+            flex-direction: row;
+            padding-top: 30px;
+            padding-bottom: 60px;
+            img{
+                @include sizes(33%, 100%);
+                padding: 15px;
+                padding-top: 0;
+                padding-bottom: 0;
+
+            }
+        }
+
+        #inicio__generos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 100px;
+            p{
+                color: $verde;
+            }
+            ul{
+                padding: 0;
+                li{
+                    color: $verde;
+                }
+            }
+        }
+    }
+}
+/* fin diseño inicio */
+
+
+
+
+/* diseño artistas */
+
+@media only screen and (max-width: 600px){
+
+    #artistas{
+        @include lados(8%, 8%);
+        #artistas__parrafos{
+            padding-bottom: 50px;
+            p{
+            font-size: 17px;
+            }
+        }
+    
+        #artistas__tituloRank{
+            font-size: 17px;
+            color: $blanco;
+            font-weight: bold;
+        }
+    
+        #artistas__rank{
+            display: flex;
+            flex-direction: column;
+        }
+    
+        #artistas__lista{
+            color: $blanco;
+            list-style-type: decimal-leading-zero;
+            font-size: 17px;
+            justify-items: center;
+            color: $verde;
+            margin-bottom: 0;
+        }
+    
+        #artistas__fotos{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(12, auto);
+            grid-row-gap: 20px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    
+        #artistas__canciones{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(4, auto);
+            grid-row-gap: 30px;
+            ul{
+                list-style: none;
+                padding: 0;
+                li{
+                    color: $verde;
+                    font-size: 17px;
+                    padding-bottom: 10px;
+        
+                }
+            } 
+        }
+    }
+
+}
+
+@media only screen and (min-width: 600px){
+    #artistas{
+        @include lados(8%, 8%);
+    
+        #artistas__parrafos{
+            padding-bottom: 50px;
+            p{
+            font-size: 20px;
+            }
+        }
+    
+        #artistas__tituloRank{
+            font-size: 20px;
+            color: $blanco;
+            font-weight: bold;
+        }
+    
+        #artistas__rank{
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: repeat(2, auto);
+        }
+    
+        #artistas__lista{
+            color: $blanco;
+            list-style-type: decimal-leading-zero;
+            font-size: 17px;
+            justify-items: center;
+            color: $verde;
+        }
+    
+        #artistas__fotos{
+            margin-top: 40px;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: repeat(6, auto);
+            grid-row-gap: 45px;
+            img{
+                width: 100%;
+                height: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    
+        #artistas__canciones{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+            ". ."
+            ". .";  
+            ul{
+                list-style: none;
+                padding: 20px;
+                margin: 0;
+                li{
+                    color: $verde;
+                    font-size: 17px;
+                    padding-bottom: 10px;
+                }
+            } 
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px){
+
+    #artistas{
+        @include lados(12%, 12%);
+    
+        #artistas__parrafos{
+            margin-top: 70px;
+            padding-bottom: 50px;
+            p{
+            font-size: 20px;
+            }
+        }
+    
+        #artistas__tituloRank{
+            font-size: 20px;
+            color: $blanco;
+            font-weight: bold;
+        }
+    
+        #artistas__rank{
+            display: flex;
+        }
+    
+        #artistas__lista{
+            color: $blanco;
+            list-style-type: decimal-leading-zero;
+            font-size: 17px;
+            justify-items: center;
+            flex: 25%;
+            color: $verde;
+        }
+    
+        #artistas__fotos{
+            margin-top: 100px;
+            margin-bottom: 100px;
+            
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+            grid-template-rows: repeat(3, auto);
+            grid-row-gap: 60px;
+            img{
+                width: 100%;
+                height: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    
+        #artistas__canciones{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: repeat(2, auto);
+            grid-column-gap: 50px;
+            grid-row-gap: 30px;
+            grid-template-areas:
+            ". ."
+            ". .";  
+            ul{
+                list-style: none;
+                padding: 0;
+                li{
+                    color: $verde;
+                    font-size: 17px;
+                }
+            } 
+        }
+    }
+}
+
+/* fin diseño artistas */
+
+
+/*diseño ultra*/
+
+@media only screen and (max-width: 600px){
+
+    #flexParrafo__ultra{
+        @include lados(8%, 8%);
+        display: flex;
+        flex-direction: column;
+        p{
+            font-size: 17px;
+        }
+    }
+    
+    #flexLinea__ultra{
+        display: flex;
+        justify-content: center;
+        @include lados(8%, 8%);
+        margin-top: 60px;
+        margin-bottom: 35px;
+        p{
+            font-size: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    } 
+    
+    #gridUltra{
+        @include lados(8%, 8%);
+        margin-top: 50px;
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+        "section1" 
+        "image1"
+        "section2" 
+        "image2"
+        "section3" 
+        "image3"
+        "section4" 
+        "image4"
+        "section5" 
+        "image5";
+
+        img{
+            @include sizes(100%, 100%);    
+        }
+    
+        div{
+        
+            p{
+                color:#171717;
+                background-color: #EEEEEE;
+                padding: 15px;
+                margin-bottom: 0;
+                font-size: 15px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            .p__gridUltra{
+                color:#171717;
+                background-color: #EEEEEE;
+                padding: 15px;
+                margin-top: 50px;
+                margin-bottom: 0;
+                padding-bottom: 0;            
+            }
+        }
+    }
+    
+    section#image1{
+        grid-area: image1;
+    }
+    #image1{
+        padding-bottom: 20px;
+    }
+    
+    section#image2{
+        grid-area: image2;
+    }
+    #image2{
+        padding-bottom: 20px;
+    }
+    
+    section#image3{
+        grid-area: image3;
+    }
+    #image3{
+        padding-bottom: 20px;
+    }
+
+    section#image4{
+        grid-area: image4;
+    }
+    #image4{
+        padding-bottom: 20px;
+    }
+    section#image5{
+        grid-area: image5;
+    }
+    #image5{
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+
+    #flexParrafo__ultra{
+        @include lados(8%, 8%);
+        display: flex;
+        flex-direction: column;
+        p{
+            font-size: 20px;
+        }
+    }
+    
+    #flexLinea__ultra{
+        display: flex;
+        justify-content: center;
+        @include lados(8%, 8%);
+        margin-top: 100px;
+        p{
+            font-size: 22px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    } 
+    
+    #gridUltra{
+        @include lados(8%, 8%);
+        margin-top: 50px;
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+        "section1"
+        "image1"
+        "section2"
+        "image2"
+        "section3"
+        "image3"
+        "section4"
+        "image4"
+        "section5"
+        "image5";
+        img{
+            @include sizes(100%, 100%);    
+        }
+    
+        div{
+        
+            p{
+                color:#171717;
+                background-color: #EEEEEE;
+                padding: 15px;
+                margin-bottom: 0;
+                font-size: 18px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+    
+            .p__gridUltra{
+                color:#171717;
+                background-color: #EEEEEE;
+                padding: 15px;
+                margin-top: 50px;
+                margin-bottom: 0;
+                padding-bottom: 0;            
+            }
+        }
+    }
+    
+    section#image1{
+        grid-area: image1;
+    }
+    #image1{
+        padding-bottom: 40px;
+    }
+    
+    section#image2{
+        grid-area: image2;
+    }
+    #image2{
+        padding-bottom: 40px;
+    }
+    
+    section#image3{
+        grid-area: image3;
+    }
+    #image3{
+        padding-bottom: 40px;
+    }
+    section#image4{
+        grid-area: image4;
+    }
+    #image4{
+        padding-bottom: 40px;
+    }
+    section#image5{
+        grid-area: image5;
+    }
+    #image5{
+        padding-bottom: 40px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+
+    #flexParrafo__ultra{
+        @include lados(12%, 12%);
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        p{
+            font-size: 20px;
+        }
+    }
+    
+    #flexLinea__ultra{
+        display: flex;
+        justify-content: center;
+        margin: 200px;
+        p{
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    } 
+    
+    #gridUltra{
+        @include lados(12%, 12%);
+        margin-top: 50px;
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:"section1 image1 image1"
+                            "image2 image2 section2"
+                            "section3 image3 image3"
+                            "image4 image4 section4"
+                            "section5 image5 image5";
+        grid-row-gap: 250px;
+    
+        img{
+            @include sizes(100%, 100%);    
+    
+        }
+    
+        div{
+        
+            p{
+                color:#171717;
+                background-color: #EEEEEE;
+                padding: 15px;
+                margin-left: 0;
+                font-size: 18px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+    
+            .p__gridUltra{
+                color:#171717;
+                background-color: #EEEEEE;
+                padding: 15px;
+                margin-top: 50px;
+                margin-bottom: 0;
+                padding-bottom: 0;            
+            }
+        }
+    }
+    
+    section#image1{
+        grid-area: image1;
+    }
+    #image1{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    
+    section#image2{
+        grid-area: image2;
+    }
+    #image2{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    
+    section#image3{
+        grid-area: image3;
+    }
+    #image3{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    section#image4{
+        grid-area: image4;
+    }
+    #image4{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    section#image5{
+        grid-area: image5;
+    }
+    #image5{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+/* fin diseño Ultra */
+
+
+/* Inicio diseño Tomorrowland */
+
+@media only screen and (max-width: 600px){
+    
+    #flexTomorrow{
+        @include lados(8%, 8%);
+        display: flex;
+        flex-direction: column;
+        p{
+            font-size: 17px;
+        }
+    
+        .flexTomorrow__tituloLinea{
+            display: flex;
+            justify-content: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 60px;
+            margin-bottom: 35px;
+            font-size: 15px
+        }
+    }
+    
+    #gridTomorrow{
+        @include lados(8%, 8%);
+        margin-top: 50px;
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+        "section1" 
+        "img1"
+        "section2" 
+        "img2"
+        "section3" 
+        "img3"
+        "section4" 
+        "img4"
+        "section5" 
+        "img5";
+    
+        img{
+            @include sizes(100%, 100%);        
+        }
+    
+        div{
+            
+            p{
+                color:#171717;
+                background-color: #EEEEEE;
+                margin-left: 0;
+                padding: 15px;
+                margin-bottom: 0;
+                font-size: 15px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+    
+            .p__gridTomorrow{
+                color:#171717;
+                background-color: #EEEEEE;
+                padding: 15px;
+                margin-top: 50px;
+                margin-bottom: 0;
+                padding-bottom: 0;            
+            }
+        }
+    }
+    
+    section#img1{
+        grid-area: img1;
+    }
+    #img1{
+        padding-bottom: 20px;
+    }
+    
+    section#img2{
+        grid-area: img2;
+    }
+    #img2{
+        padding-bottom: 20px;
+    }
+    
+    section#img3{
+        grid-area: img3;
+    }
+    #img3{
+        padding-bottom: 20px;
+    }
+    
+    section#img4{
+        grid-area: img4;
+    }
+    #img4{
+        padding-bottom: 20px;
+    }
+    
+    section#img5{
+        grid-area: img5;
+    }
+    #img5{
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    #flexTomorrow{
+        @include lados(8%, 8%);
+        display: flex;
+        flex-direction: column;
+        p{
+            font-size: 20px;
+        }
+    
+        .flexTomorrow__tituloLinea{
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            font-size: 22px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    
+    }
+    
+    #gridTomorrow{
+        @include lados(8%, 8%);
+        margin-top: 50px;
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+        "section1"
+        "img1"
+        "section2"
+        "img2"
+        "section3"
+        "img3"
+        "section4"
+        "img4"
+        "section5"
+        "img5";
+            
+        img{
+            @include sizes(100%, 100%);        
+        }
+    
+        div{
+            p{
+                color:#171717;
+                background-color: #EEEEEE;
+                margin-bottom: 0;
+                padding: 15px;
+                font-size: 18px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+    
+            .p__gridTomorrow{
+                color:#171717;
+                background-color: #EEEEEE;
+                padding: 15px;
+                margin-top: 50px;
+                margin-bottom: 0;
+                padding-bottom: 0;            
+            }
+        }
+    }
+    
+    section#img1{
+        grid-area: img1;
+    }
+    #img1{
+        padding-bottom: 40px;
+    }
+    
+    section#img2{
+        grid-area: img2;
+    }
+    #img2{
+        padding-bottom: 40px;
+    }
+    
+    section#img3{
+        grid-area: img3;
+    }
+    #img3{
+        padding-bottom: 40px;
+    }
+    
+    section#img4{
+        grid-area: img4;
+    }
+    #img4{
+        padding-bottom: 40px;
+    }
+    
+    section#img5{
+        grid-area: img5;
+    }
+    #img5{
+        padding-bottom: 40px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    #flexTomorrow{
+        @include lados(12%, 12%);
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        p{
+            font-size: 20px;
+        }
+    
+        .flexTomorrow__tituloLinea{
+            display: flex;
+            justify-content: center;
+            margin: 200px;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    
+    }
+    
+    #gridTomorrow{
+        @include lados(12%, 12%);
+        margin-top: 50px;
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:"section1 img1 img1"
+                            "img2 img2 section2"
+                            "section3 img3 img3"
+                            "img4 img4 section4"
+                            "section5 img5 img5";
+        grid-row-gap: 250px;
+    
+        img{
+            @include sizes(100%, 100%);        
+        }
+    
+        div{
+            
+    
+            p{
+                color:#171717;
+                background-color: #EEEEEE;
+                margin-left: 0;
+                padding: 15px;
+                font-size: 18px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+    
+            .p__gridTomorrow{
+                color:#171717;
+                background-color: #EEEEEE;
+                padding: 15px;
+                margin-top: 50px;
+                margin-bottom: 0;
+                padding-bottom: 0;            
+            }
+        }
+    }
+    
+    section#img1{
+        grid-area: img1;
+    }
+    #img1{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    
+    section#img2{
+        grid-area: img2;
+    }
+    #img2{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    
+    section#img3{
+        grid-area: img3;
+    }
+    #img3{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    
+    section#img4{
+        grid-area: img4;
+    }
+    #img4{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    
+    section#img5{
+        grid-area: img5;
+    }
+    #img5{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+}
+/* fin diseño tow */
+
+/* nav */
+.topnav {
+    background-color: $negro;
+    overflow: hidden;
+  }
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: $blanco;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav .icon {
+    display: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: $verde;
+    color: white;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  @media screen and (max-width: 720px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 710px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+/* fin nav */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
